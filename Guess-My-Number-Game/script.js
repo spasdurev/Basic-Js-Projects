@@ -3,7 +3,7 @@
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
-//document.querySelector('.number').textContent = secretNumber; this is the secretnumber
+// document.querySelector(".number").textContent = secretNumber; = this is the secret number
 const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
 };
@@ -29,11 +29,9 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".highscore").textContent = highscore;
     }
 
-    // when guess is wrong
+    // when the guess is wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      // document.querySelector('.message').textContent =
-      //   // guess > secretNumber ? 'Too high! 📈' : 'Too low! 📉';
       displayMessage(guess > secretNumber ? "Too high! 📈" : "Too low! 📉");
       score--;
       document.querySelector(".score").textContent = score;
